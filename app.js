@@ -1,6 +1,13 @@
-// import * as symbols from 'english-symbols';
-import { secsInMin } from './english-symbols';
-console.log(secsInMin);
+import { engKeyBoard, createRow } from './english-symbols';
+import {createTextArea} from './text-area';
+import { rusKeyBoard } from './russian-symbols';
 
-// for (let symb of symbols)
-//     console.log(symb);
+document.body.append()
+document.body.append(createTextArea());
+for (let row of engKeyBoard) {
+    document.body.append(createRow(row));
+}
+
+for (let row of rusKeyBoard) {
+    document.body.append(createRow(row));
+}
