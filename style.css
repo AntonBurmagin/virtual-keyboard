@@ -16,10 +16,11 @@
 .text-area {
     margin: 10px 0 20px;
     display: flex;
+    display: block;
     width: 90%;
     max-width: 700px;
     background-color: rgb(230, 245, 212);
-    height: 50vh;
+    height: 40vh;
 }
 
 .sup {
@@ -36,4 +37,16 @@ button {
 
 .pressed {
     background-color: rgb(216, 87, 87);
+}
+
+.keyboard-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.note {
+    width: 100%;
+    text-align: center;
 }

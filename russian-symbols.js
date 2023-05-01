@@ -8,7 +8,7 @@ export const rusSymbolsThirdRow = ['CapsLock', 'Ф', 'Ы', 'В', 'А', 'П', 'Р
 
 export const rusSymbolsForthRow = ['Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', [',', '.'], '&uarr;', 'Shift'];
 
-export const rusSymbolsFifthRow = ['Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Ctrl', '&larr;', '&darr;', '&rarr;'];
+export const rusSymbolsFifthRow = ['Ctrl', 'Alt', ' ', 'Alt', 'Ctrl', '&larr;', '&darr;', '&rarr;'];
 
 export const rusKeyBoard = [rusSymbolsFirstRow, rusSymbolsSecondRow, rusSymbolsThirdRow,
                             rusSymbolsForthRow, rusSymbolsFifthRow];

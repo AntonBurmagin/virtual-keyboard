@@ -9,7 +9,7 @@ export const engSymbolsThirdRow = ['CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J'
 
 export const engSymbolsForthRow = ['Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', '&uarr;', 'Shift'];
 
-export const engSymbolsFifthRow = ['Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Ctrl', '&larr;', '&darr;', '&rarr;'];
+export const engSymbolsFifthRow = ['Ctrl', 'Alt', ' ', 'Alt', 'Ctrl', '&larr;', '&darr;', '&rarr;'];
 
 export const engKeyBoard = [engSymbolsFirstRow, engSymbolsSecondRow, engSymbolsThirdRow, 
                             engSymbolsForthRow, engSymbolsFifthRow];
