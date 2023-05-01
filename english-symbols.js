@@ -2,13 +2,13 @@ export const engSymbolsFirstRow = [['`','~'], ['!','1'], ['@','2'], ['#','3'], [
                     ['&','7'], ['*','8'], ['(','9'], [')','0'], ['_','-'], ['+','='], 'Backspace'];
 
 export const engSymbolsSecondRow = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', ['|', 
-'\\'], 'DEL'];
+'\\'], 'Delete'];
 
-export const engSymbolsThirdRow = ['Caps Lock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '\'', 'ENTER'];
+export const engSymbolsThirdRow = ['CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '\'', 'Enter'];
 
 export const engSymbolsForthRow = ['Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', '&uarr;', 'Shift'];
 
-export const engSymbolsFifthRow = ['Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Ctrl', '&larr;', '&darr;', '&rarr;'];
+export const engSymbolsFifthRow = ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'Ctrl', '&larr;', '&darr;', '&rarr;'];
 
 export const engKeyBoard = [engSymbolsFirstRow, engSymbolsSecondRow, engSymbolsThirdRow, 
                             engSymbolsForthRow, engSymbolsFifthRow];
@@ -23,6 +23,18 @@ export function createRow (arr) {
         } else {
             button.innerHTML = symbol;
         }
+        document.body.addEventListener("keydown", function (event) {
+            if(event.key === symbol || event.key.toUpperCase() === symbol || 
+              (Array.isArray(symbol) && (event.key === symbol[0] || event.key === symbol[1]))) {
+                  button.className = 'pressed';
+            }
+        });
+        document.body.addEventListener("keyup", function (event) {
+            if(event.key === symbol || event.key.toUpperCase() === symbol || 
+              (Array.isArray(symbol) && (event.key === symbol[0] || event.key === symbol[1]))) {
+                  button.className = '';
+            }
+        });
         row.append(button);
     }
     return row;
