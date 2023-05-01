@@ -3,7 +3,8 @@ import { rusKeyBoard } from './russian-symbols';
 
 
 export function setKeyboard(boardArea){
-    if (document.cookie.includes('rus')) {
+    boardArea.innerHTML = '';
+    if (document.cookie.includes('russian')) {
         for (let row of rusKeyBoard) {
             boardArea.append(createRow(row));
         }
