@@ -2,9 +2,9 @@ import { engKeyBoard, createRow } from './english-symbols';
 import { rusKeyBoard } from './russian-symbols';
 
 
-export function setKeyboard(boardArea){
+export function setKeyboard(boardArea, lang){
     boardArea.innerHTML = '';
-    if (document.cookie.includes('russian')) {
+    if (lang === 'rus') {
         for (let row of rusKeyBoard) {
             boardArea.append(createRow(row));
         }

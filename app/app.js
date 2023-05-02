@@ -1,23 +1,25 @@
 import {createTextArea, createKeyBoard, createNote} from './text-area';
 import { setKeyboard } from './set-keyboard';
 
+let lang = 'eng';
 
 document.body.append(createNote());
 document.body.append(createTextArea());
 let kbContainer = createKeyBoard();
 document.body.append(kbContainer);
 
-console.log(document.cookie);
-
-setKeyboard(kbContainer);
+setKeyboard(kbContainer, lang);
 
 let pressed = new Set();
 let change = false;
 window.addEventListener("keydown", function (event) {
     pressed.add(event.key);
     if (pressed.has('Shift') && pressed.has('Alt')) {
-        document.cookie = (document.cookie.includes('russian') ? 'language = english;' : 'language = russian;');
-        console.log(document.cookie);
+        if (lang === 'eng') {
+            lang = 'rus';
+        } else {
+            lang = 'eng';
+        }
         change = true;
     }
 });
@@ -25,7 +27,7 @@ window.addEventListener("keydown", function (event) {
 window.addEventListener("keyup", function (event) {
     pressed.delete(event.key);
     if(change){
-        setKeyboard(kbContainer);
+        setKeyboard(kbContainer, lang);
         change = false;
     }
 })
